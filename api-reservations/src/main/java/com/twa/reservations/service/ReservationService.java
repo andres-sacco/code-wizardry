@@ -64,7 +64,7 @@ public class ReservationService {
     public ReservationDTO update(Long id, ReservationDTO reservation) {
         if (getReservationById(id) == null) {
             LOGGER.debug("Not exist reservation with the id {}", id);
-            throw new TWAException(APIError.RESERVATION_NOT_FOUND);
+            new TWAException(APIError.RESERVATION_NOT_FOUND);
         }
         checkCity(reservation);
         Reservation transformed = conversionService.convert(reservation, Reservation.class);

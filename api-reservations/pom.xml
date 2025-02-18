@@ -21,8 +21,9 @@
         <junit.version>5.10.1</junit.version>
         <mockito.version>5.4.0</mockito.version>
         <junit-platform-launcher.version>1.8.2</junit-platform-launcher.version>
+        <datafaker.version>2.3.0</datafaker.version>
 
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
         <formatter-maven-plugin.version>2.23.0</formatter-maven-plugin.version>
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
@@ -106,16 +107,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.instancio</groupId>
-            <artifactId>instancio-junit</artifactId>
-            <version>5.2.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>net.datafaker</groupId>
             <artifactId>datafaker</artifactId>
-            <version>2.3.0</version>
+            <version>${datafaker.version}</version>
         </dependency>
 
     </dependencies>
