@@ -45,7 +45,7 @@ public class ReservationService {
         Optional<Reservation> result = repository.getReservationById(id);
         if (result.isEmpty()) {
             LOGGER.debug("Not exist reservation with the id {}", id);
-            throw new TWAException(APIError.RESERVATION_NOT_FOUND);
+            new TWAException(APIError.RESERVATION_NOT_FOUND);
         }
         return conversionService.convert(result.get(), ReservationDTO.class);
     }
