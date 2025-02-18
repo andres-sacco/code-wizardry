@@ -147,7 +147,7 @@
                     <compilerArgs>
                         <arg>-XDcompilePolicy=simple</arg>
                         <!-- Enable error_prone as a plugin -->
-                        <arg>-Xplugin:ErrorProne</arg>
+                        <arg>-Xplugin:ErrorProne -XepPatchChecks:DeadException,EqualsGetClass -XepPatchLocation:IN_PLACE</arg>
                     </compilerArgs>
                     <annotationProcessorPaths>
                         <!-- Error Prone itself. -->

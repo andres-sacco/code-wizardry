@@ -37,7 +37,7 @@ public class Itinerary {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof Itinerary))
             return false;
         Itinerary itinerary = (Itinerary) o;
         return Objects.equals(id, itinerary.id) && Objects.equals(segment, itinerary.segment)

@@ -67,7 +67,7 @@ public class Segment {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof Segment))
             return false;
         Segment segment = (Segment) o;
         return Objects.equals(id, segment.id) && Objects.equals(origin, segment.origin)

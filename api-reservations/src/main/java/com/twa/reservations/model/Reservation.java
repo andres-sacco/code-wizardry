@@ -38,7 +38,7 @@ public class Reservation {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof Reservation))
             return false;
         Reservation that = (Reservation) o;
         return Objects.equals(id, that.id) && Objects.equals(passengers, that.passengers)

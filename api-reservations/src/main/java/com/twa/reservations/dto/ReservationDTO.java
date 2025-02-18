@@ -47,7 +47,7 @@ public class ReservationDTO {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof ReservationDTO))
             return false;
         ReservationDTO that = (ReservationDTO) o;
         return Objects.equals(id, that.id) && Objects.equals(passengers, that.passengers)

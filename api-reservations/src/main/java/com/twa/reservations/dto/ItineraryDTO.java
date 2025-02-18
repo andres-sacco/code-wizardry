@@ -32,7 +32,7 @@ public class ItineraryDTO {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof ItineraryDTO))
             return false;
         ItineraryDTO that = (ItineraryDTO) o;
         return Objects.equals(segment, that.segment) && Objects.equals(price, that.price);

@@ -66,7 +66,7 @@ public class SegmentDTO {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof SegmentDTO))
             return false;
         SegmentDTO that = (SegmentDTO) o;
         return Objects.equals(origin, that.origin) && Objects.equals(destination, that.destination)

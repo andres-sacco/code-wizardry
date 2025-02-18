@@ -67,7 +67,7 @@ public class PassengerDTO {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof PassengerDTO))
             return false;
         PassengerDTO that = (PassengerDTO) o;
         return Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName)

@@ -48,7 +48,7 @@ public class Price {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof Price))
             return false;
         Price price = (Price) o;
         return Objects.equals(id, price.id) && Objects.equals(totalPrice, price.totalPrice)

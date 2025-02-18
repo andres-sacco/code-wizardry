@@ -45,7 +45,7 @@ public class PriceDTO {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof PriceDTO))
             return false;
         PriceDTO priceDTO = (PriceDTO) o;
         return Objects.equals(totalPrice, priceDTO.totalPrice) && Objects.equals(totalTax, priceDTO.totalTax)
