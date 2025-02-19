@@ -24,6 +24,7 @@
         <datafaker.version>2.3.0</datafaker.version>
 
         <error-prone.version>2.30.0</error-prone.version>
+        <error-prone-support.version>0.20.0</error-prone-support.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
         <formatter-maven-plugin.version>2.23.0</formatter-maven-plugin.version>
@@ -147,7 +148,7 @@
                     <compilerArgs>
                         <arg>-XDcompilePolicy=simple</arg>
                         <!-- Enable error_prone as a plugin -->
-                        <arg>-Xplugin:ErrorProne -XepPatchChecks:DeadException,EqualsGetClass -XepPatchLocation:IN_PLACE</arg>
+                        <arg>-Xplugin:ErrorProne</arg>
                     </compilerArgs>
                     <annotationProcessorPaths>
                         <!-- Error Prone itself. -->
@@ -155,6 +156,20 @@
                             <groupId>com.google.errorprone</groupId>
                             <artifactId>error_prone_core</artifactId>
                             <version>${error-prone.version}</version>
+                        </path>
+
+                        <!-- Error Prone Support's additional bug checkers. -->
+                        <path>
+                            <groupId>tech.picnic.error-prone-support</groupId>
+                            <artifactId>error-prone-contrib</artifactId>
+                            <version>${error-prone-support.version}</version>
+                        </path>
+
+                        <!-- Error Prone Support's Refaster rules. -->
+                        <path>
+                            <groupId>tech.picnic.error-prone-support</groupId>
+                            <artifactId>refaster-runner</artifactId>
+                            <version>${error-prone-support.version}</version>
                         </path>
 
                         <path>
